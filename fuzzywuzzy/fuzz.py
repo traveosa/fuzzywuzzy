@@ -255,7 +255,7 @@ def WRatio(s1, s2, force_ascii=True):
         tsor = token_sort_ratio(p1, p2, force_ascii=force_ascii) * unbase_scale
         tser = token_set_ratio(p1, p2, force_ascii=force_ascii) * unbase_scale
 
-        return utils.intr(max(base, tsor, tser))
+        return utils.intr(min(base, tsor, tser))
 
 
 def UWRatio(s1, s2):
